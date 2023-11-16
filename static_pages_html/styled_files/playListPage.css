@@ -1,0 +1,74 @@
+.titlePage{
+    color: green!important;
+    text-align: center;
+    margin: 11px 0 44px 0px;
+}
+
+.blkContainer{
+    max-height: 360px;
+    overflow: auto;
+    margin: 35px 7px;
+    flex: 1;
+}
+
+body{
+    /* background-color: rgba(138, 43, 226,.2); */
+    /* background-image: linear-gradient(to right, black, rgb(34, 1, 34)3%, black); */
+    background-image: linear-gradient(rgb(19, 1, 19)3%, black);
+    color: wheat;
+}
+
+.noShow{
+    display: none!important;
+}
+
+a:hover{
+    color: orange;
+    transition: 500ms;
+}
+
+.clipPlyLstAllBlk{
+    display: flex;
+    margin: 55px 0 33px 0px;
+    border: solid tomato 2px;
+}
+
+.titleClip{
+    display: inline-block;
+}
+
+.titleClipAndImg{
+    flex: 1;
+}
+
+.plyLstTitle{
+    max-width: 75%;
+    margin: 11px 2px;
+}
+
+.urlClip{
+    /* border: solid red 2px; */
+    margin-bottom: 11px;
+    max-height: 450px;
+    overflow: auto;
+    padding: 3px;
+    margin-bottom: 11px;
+}
+
+
+.prposBlk{
+    /* border: solid yellow 2px;  */
+    padding: 2px;
+    margin-top: 7px;
+    flex:1;
+    width: 100vw;
+}
+
+
+.linksList{
+    display: flex;
+    flex-direction: row;
+    gap: 11px;
+    align-items: center;
+    margin-top: 33px;
+}

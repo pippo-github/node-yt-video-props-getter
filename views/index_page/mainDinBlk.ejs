@@ -1,0 +1,49 @@
+<% if(locals.retClipObj) {%>
+
+<div class="allContainerMainBlk">
+        <div class="head_part_info">
+            <h4 class='titleClip'>
+                <%=  titleClip.replace(/&#39;|&quot;/gim, '\'') %>
+            </h4>
+            <div>
+                <img src="<%=imageClip%>" alt="">
+            </div>
+            <h4>
+                <a href="/show_restAPI">Show restAPI</a>
+            </h4>
+        </div>
+
+    <div class="allContainer">
+    <% for(let i = 0 ; i < retClipObj.length ; i++) { %>
+        <div class='allBlkClipData'>
+            <div class='urlClip'>
+                <div class='linksList'>
+                    <a href="<%= retClipObj[i].url %>" target="_blank"> link </a>
+                    <button onclick='cpyToClb("<%= retClipObj[i].url %>")'> copy link into clipboard </button>
+                </div> 
+            </div>
+                <div class="prposBlk">
+                    <div class='mimeTypeClip'>
+                        <span class='lblProps'> MimeType: </span> <%= retClipObj[i].mimeType %>
+                    </div>
+                    <div class='bitrateClip'>
+                        <span class='lblProps'> bitRate: </span> <%= retClipObj[i].bitrate %>
+                    </div>
+                    <div class='contentLengthClip'>
+                        <span class='lblProps'> contentLength: </span> <%= (retClipObj[i].contentLength) ? retClipObj[i].contentLength : "N/A" %>
+                    </div>
+                    <div class='qualityClip'>
+                        <span class='lblProps'> quality: </span> <%= (retClipObj[i].quality) ? retClipObj[i].quality : "N/A" %>
+                    </div>
+                    <div class='audioQualityClip'>
+                        <span class='lblProps'> audio quality: </span> <%= (retClipObj[i].audioQuality) ? retClipObj[i].audioQuality : "N/A" %>
+                    </div>
+                    <div class='audioChannelsClip'>
+                        <span class='lblProps'> audio channales: </span> <%= (retClipObj[i].audioChannels) ? retClipObj[i].audioChannels : "N/A"  %>
+                    </div>        
+                </div>
+        </div>
+        <%}%>  
+    </div>
+    <% }%>
+</div>

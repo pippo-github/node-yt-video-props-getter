@@ -1,0 +1,39 @@
+.banner_restAPI{
+    margin: 22px 1px;
+    border: solid red 1px;
+    padding: 7px;
+    background-color: rgba(9, 48, 15, 0.9);
+    border-radius: 5px;
+    color: white;
+}
+
+.banner_restAPI > h4{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    text-align: center;
+    color: rgb(154, 228, 154);
+    background-color: blueviolet;
+    padding: 11px;
+}
+
+
+.banner_restAPI > p:nth-child(2){
+    /* color: red!important; */
+    font-style: italic;
+}
+
+.banner_restAPI h5{
+    font-size: 16px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-style: italic;
+    text-decoration: underline;
+    color: yellow
+}
+
+.restAPI_sintax{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color: rgb(204, 238, 204);
+}
+
+.modalityRestAPI{
+    margin: 33px 16px 44px 11px;
+}

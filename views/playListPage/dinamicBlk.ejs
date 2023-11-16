@@ -1,0 +1,54 @@
+<%if(locals.allPlayLstClpAndProps){%>
+<%- include("../../views/playListPage/mainCtrls"); %>
+ 
+<div class="allContainerMainBlk">   
+    <%for(let n = 0 ; n < allPlayLstClpAndProps.length ; n++) {%>
+        <%for(let i = 0 ; i < allPlayLstClpAndProps[n].length ; i++) {%>
+            <div class="clipPlyLstAllBlk">
+                <div class="titleClipAndImg">
+                    <div class='plyLstTitle'>
+                        <b><i>
+                          #<%=n %>
+                          <%- allPlayLstClpAndProps[n][i].clipTitle %>
+                        </i></b>
+                    </div>
+                    <div class='plyLstImg'>
+                        <img src="<%= allPlayLstClpAndProps[n][i].clipImg %>" alt="">
+                    </div>
+                </div>
+                <div class='blkContainer'>
+                        <%for(let k = 0 ; k < allPlayLstClpAndProps[n][i].propsAndUrl.length ; k++) {%>
+                            <div class='clipPropsBlk'>
+
+                                <div class="urlClip">
+                                    <a href="<%= allPlayLstClpAndProps[n][i].propsAndUrl[k].url %>" target="_blank"> Link # <%= k %> </a>
+                                    <div class="propsListed">
+                                        <div class="propBox">
+                                            <span class="labelProps">MimeType: </span><%=allPlayLstClpAndProps[n][i].propsAndUrl[k].mimeType%>
+                                        </div>
+                                        <div class="propBox">
+                                            <span class='lblProps'> contentLength: </span> <%= (allPlayLstClpAndProps[n][i].propsAndUrl[k].contentLength) ? allPlayLstClpAndProps[n][i].propsAndUrl[k].contentLength : "N/A" %>
+                                        </div>
+                                        <div class="propBox">
+                                            <span class="labelProps">Bitrate: </span><%=allPlayLstClpAndProps[n][i].propsAndUrl[k].bitrate%>
+                                        </div>
+                                        <div class="propBox">
+                                            <span class="labelProps">Quality: </span><%=allPlayLstClpAndProps[n][i].propsAndUrl[k].quality%>
+                                        </div>
+                                        <div class="propBox">
+                                            <span class="labelProps">Audio quality: </span><%=allPlayLstClpAndProps[n][i].propsAndUrl[k].audioQuality%>
+                                        </div>
+                                        <div class="propBox">
+                                            <span class="labelProps">Audio channels: </span><%=allPlayLstClpAndProps[n][i].propsAndUrl[k].audioChannels%>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                        <%}%>
+                </div>
+            </div>
+        <%}%>
+    <%}%>
+</div>
+<%}%>

@@ -1,0 +1,28 @@
+<div class="mainLinks">
+    <span>
+        If the contents produced have not appeared or do not satisfy you, 
+        <a href="#" onclick="javascript: location.reload(true);">  refresh the page </a>
+    </span>
+    <div class="playLstTitle">
+        <a href="<%=playLstUrl%>" target="_blank">
+            <h2 class='titleClip' title="visualizza sul provider">
+                <%- plyLstName %>
+            </h2>
+        </a>    
+    </div>
+
+    <div style="display: flex; gap: 11px;">
+
+        <div class="bckH"> 
+            <a href="/"> Back to home </a>    
+        </div>
+        <div> | </div>
+        <div >
+            <a onclick="showHideRestApi(this)" href="#">
+                Show info restAPI
+            </a>
+        </div>
+
+    </div>
+
+<%- include("../../views/benner_restAPI/bannerAPI_fragment.ejs");%>

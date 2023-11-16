@@ -1,0 +1,58 @@
+<h1>
+    Video properties getter
+</h1>
+
+<div class="paragDesc">
+    <p>
+        This application allows you to insert a URL to a clip or playlist from youtube.com to extract all properties related to the video/s.
+    </p>
+
+    <p>
+        The example currently only works on unencrypted clips, playlists with a number of clips greater than 100 will be processed up to the hundredth element.    </p>
+</div>
+
+
+<div class="controlBlk">
+
+    <div class="mainLabel">
+        Select into box below you preferd content. 
+    </div>
+
+    <form onsubmit="getSubmit(event)">
+        <input 
+        type="text" 
+        id='clipUrlTxt' 
+        placeholder="write the URL to the clip or playlist"
+        onBlur="getSubmit(event)" 
+        onkeyup="getSubmit(event)" 
+        required
+        >
+
+        <div class="radioChoice">
+            <label for="idClp" class="radioLbl">Single clip </label>
+            <input 
+                checked 
+                class='radioBtn' 
+                type="radio" 
+                name="choice" 
+                id="idClp" 
+                value='clip'
+                onchange="getSubmit(event)"
+            >
+            
+            <label for="idPlyLst" class="radioLbl">Playlist</label>    
+            <input 
+                class='radioBtn' 
+                type="radio" 
+                name="choice" 
+                id="idPlyLst" 
+                value='playlist'
+                onchange="getSubmit(event)"
+                >
+
+            <div id="btnContainer"></div>
+
+        </div>
+    </form>
+    <div id='validateUrl'></div>
+</div>
